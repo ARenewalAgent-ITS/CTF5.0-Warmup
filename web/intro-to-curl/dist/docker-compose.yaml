@@ -3,14 +3,14 @@ services:
   nginx:
     build: ./nginx
     ports: 
-      - "31337:80"
+      - "1019:80"
     networks:
       - internal
   php:
-    build: ./src
+    build: ./php
     networks:
       - internal
-  flags:
+  flag:
     build: ./flag
     networks:
       - internal
